@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import Menu from '../../components/Menu';
 import PageDefault from '../../components/PageDefault';
@@ -8,7 +9,7 @@ import Carousel from '../../components/Carousel';
 
 function Home() {
   return (
-    <div >
+    <>
       <PageDefault>
 
         <BannerMain
@@ -24,7 +25,7 @@ function Home() {
 
       </PageDefault>
 
-    </div>
+    </>
   );
 }
 
