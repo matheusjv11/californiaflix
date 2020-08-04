@@ -28,9 +28,11 @@ function CadastroCategoria() {
     setValor(name, value);
   }
 
-  useEffect(() => {
-    const URL = 'http://localhost:8080/categorias';
+  const URL = window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080/categorias'
+    : 'https://californiaflix.herokuapp.com/categorias';
 
+  useEffect(() => {
     fetch(URL)
       .then(async (response) => {
         const result = await response.json();
@@ -41,7 +43,23 @@ function CadastroCategoria() {
         );
       });
   }, []);
-
+  /*
+  function sendCategoria() {
+    const data = {
+      id: Date.now(), nome: 'Oiqq', descricao: 'Eai', cor: '#fffff',
+    };
+    fetch(URL, {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(async (response) => {
+        console.log(await response);
+      });
+  }
+*/
   return (
     <PageDefault>
 

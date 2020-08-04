@@ -1,16 +1,16 @@
 {
-    "categorias":[
-        {
-            "id": 1,
-            "nome": "Front End",
-            "descricao": "Aqui é onde os softwares são gerados",
-            "cor": "#cbd1fdf"
-        },
-        {
-            "id": 2,
-            "nome": "Back End",
-            "descricao": "Aqui é onde os softwares inciados",
-            "cor": "#cbd1fdf"
-        }
-    ]
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Front End",
+      "descricao": "Aqui é onde os softwares são gerados",
+      "cor": "#cbd1fdf"
+    },
+    {
+      "id": 2,
+      "nome": "Back End",
+      "descricao": "Aqui é onde os softwares inciados",
+      "cor": "#cbd1fdf"
+    }
+  ]
 }
