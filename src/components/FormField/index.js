@@ -55,6 +55,7 @@ const Input = styled.input`
   border-radius: 4px;
   transition: border-color .3s;
   
+  
   &:focus {
     border-bottom-color: var(--primary);
   }
@@ -62,20 +63,30 @@ const Input = styled.input`
     transform: scale(.6) translateY(-10px);
   }
   
-  ${function ({ hasValue }) {
-    return hasValue && css`
+  /*${({ hasValue }) => hasValue && css`
+    background-color: red;
     &:focus:not([type='color']) + ${Label.Text} {
     transform: scale(.6) translateY(-10px);
     }
-    `;
-  }};
+  
+    `};*/
+
+    ${({ value }) => {
+    const hasValue = value.length > 0;
+    return hasValue && css`
+        &:not([type='color']) + ${Label.Text} {
+          transform: scale(.6) translateY(-10px);
+        }
+      `;
+  }
+}
 `;
 
 function FormField({
   type, label, name, valor, onChange, tag,
 }) {
   const fieldId = `id_${name}`;
-  const hasValue = Boolean(valor.length);
+
   return (
     <FormFieldWrapper>
       <Label
@@ -86,7 +97,6 @@ function FormField({
           id={fieldId}
           type={type}
           value={valor}
-          hasValue={hasValue}
           name={name}
           onChange={onChange}
         />
@@ -102,7 +112,7 @@ function FormField({
 FormField.defaultProps = {
   type: 'text',
   valor: '',
-  onChange: () => {},
+  onChange: () => { },
   tag: 'input',
 
 };
