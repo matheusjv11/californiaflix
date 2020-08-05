@@ -65,6 +65,20 @@
       "nome": "The Getaway",
       "descricao": "2016",
       "cor": "#7b6a6a"
+    },
+    {
+      "id": 1596634163297,
+      "nome": "teste",
+      "descricao": "ajshdsja",
+      "cor": "#9f7474"
+    }
+  ],
+  "videos":[
+    {
+      "id": 159662989623337,
+      "categoriaId": 1596630370169,
+      "titulo": "Sick Love",
+      "url": "https://www.youtube.com/watch?v=I2XfVml6o24"
     }
   ]
 }

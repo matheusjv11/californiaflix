@@ -3,30 +3,16 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/userForm';
 
 function CadastroCategoria() {
-  const [categorias, setCategorias] = useState([]);
-
   const valoreIniciais = {
     nome: '',
     descricao: '',
     cor: '',
   };
-
-  const [valores, setValores] = useState(valoreIniciais);
-
-  function setValor(chave, valor) {
-    // chave: nome, descricao, cor
-    setValores({
-      ...valores,
-      [chave]: valor, // nome:'valor'
-    });
-  }
-
-  function handlerChange(infosDoEvento) {
-    const { name, value } = infosDoEvento.target;
-    setValor(name, value);
-  }
+  const [categorias, setCategorias] = useState([]);
+  const { valores, handlerChange, clearForm } = useForm(valoreIniciais);
 
   const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/categorias'
@@ -72,7 +58,7 @@ function CadastroCategoria() {
           valores,
         ]);
 
-        setValores(valoreIniciais);
+        clearForm();
       }}
       >
 
