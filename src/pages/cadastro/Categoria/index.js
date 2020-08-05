@@ -43,10 +43,10 @@ function CadastroCategoria() {
         );
       });
   }, []);
-  /*
+
   function sendCategoria() {
     const data = {
-      id: Date.now(), nome: 'Oiqq', descricao: 'Eai', cor: '#fffff',
+      id: Date.now(), nome: valores.nome, descricao: valores.descricao, cor: valores.cor,
     };
     fetch(URL, {
       method: 'POST', // or 'PUT'
@@ -54,12 +54,9 @@ function CadastroCategoria() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
-    })
-      .then(async (response) => {
-        console.log(await response);
-      });
+    });
   }
-*/
+
   return (
     <PageDefault>
 
@@ -104,14 +101,14 @@ function CadastroCategoria() {
           onChange={handlerChange}
         />
 
-        <Button>
+        <Button onClick={sendCategoria}>
           Cadastrar
         </Button>
       </form>
 
       <ul>
-        {categorias.map((categoria, indice) => (
-          <li key={`${categoria}${indice}`}>
+        {categorias.map((categoria) => (
+          <li key={categoria.id}>
             {categoria.nome}
           </li>
         ))}

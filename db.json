@@ -1,16 +1,70 @@
 {
   "categorias": [
     {
-      "id": 1,
-      "nome": "Front End",
-      "descricao": "Aqui é onde os softwares são gerados",
-      "cor": "#cbd1fdf"
+      "id": 1596629896237,
+      "nome": "Red Hot Chili Peppers",
+      "descricao": "1984",
+      "cor": "#daabab"
     },
     {
-      "id": 2,
-      "nome": "Back End",
-      "descricao": "Aqui é onde os softwares inciados",
-      "cor": "#cbd1fdf"
+      "id": 1596629958236,
+      "nome": "Freaky Styley",
+      "descricao": "1985",
+      "cor": "#81544a"
+    },
+    {
+      "id": 1596630008075,
+      "nome": "The Uplift Mofo Party Plan ",
+      "descricao": "1987",
+      "cor": "#f2a0b9"
+    },
+    {
+      "id": 1596630081058,
+      "nome": "Mother's Milk",
+      "descricao": "1989",
+      "cor": "#ffffff"
+    },
+    {
+      "id": 1596630111771,
+      "nome": "Blood Sugar Sex Magik",
+      "descricao": "1991",
+      "cor": "#ce1b1b"
+    },
+    {
+      "id": 1596630180783,
+      "nome": "One Hot Minute",
+      "descricao": "1995",
+      "cor": "#271919"
+    },
+    {
+      "id": 1596630211442,
+      "nome": "Californication",
+      "descricao": "1999",
+      "cor": "#dd6706"
+    },
+    {
+      "id": 1596630241578,
+      "nome": "By the Way",
+      "descricao": "2002",
+      "cor": "#799ff4"
+    },
+    {
+      "id": 1596630283793,
+      "nome": "Stadium Arcadium",
+      "descricao": "2006",
+      "cor": "#282593"
+    },
+    {
+      "id": 1596630338225,
+      "nome": "I'm with You",
+      "descricao": "2011",
+      "cor": "#d0cece"
+    },
+    {
+      "id": 1596630370169,
+      "nome": "The Getaway",
+      "descricao": "2016",
+      "cor": "#7b6a6a"
     }
   ]
 }
