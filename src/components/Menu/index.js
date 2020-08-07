@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/img/logo_matheusflix.png';
+import logo from '../../assets/img/logoCaliforniaflix.png';
 import './menu.css';
 //  import ButtonLink from './components/ButtonLinkProps'
 import Button from '../Button';

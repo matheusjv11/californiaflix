@@ -22,7 +22,7 @@
       "id": 1596630081058,
       "nome": "Mother's Milk",
       "descricao": "1989",
-      "cor": "#ffffff"
+      "cor": "#5D576B"
     },
     {
       "id": 1596630111771,
@@ -65,20 +65,38 @@
       "nome": "The Getaway",
       "descricao": "2016",
       "cor": "#7b6a6a"
-    },
-    {
-      "id": 1596634163297,
-      "nome": "teste",
-      "descricao": "ajshdsja",
-      "cor": "#9f7474"
     }
   ],
-  "videos":[
+  "videos": [
     {
-      "id": 159662989623337,
-      "categoriaId": 1596630370169,
-      "titulo": "Sick Love",
-      "url": "https://www.youtube.com/watch?v=I2XfVml6o24"
+      "titulo": "True Man Don't Kill Coyotes",
+      "url": "https://www.youtube.com/watch?v=KvR86EwYNGU",
+      "categoriaId": 1596629896237,
+      "id": 1
+    },
+    {
+      "titulo": "Baby Appel",
+      "url": "https://www.youtube.com/watch?v=GYr9h49uxQ0",
+      "categoriaId": 1596629896237,
+      "id": 2
+    },
+    {
+      "titulo": "Buckle Down",
+      "url": "https://www.youtube.com/watch?v=WA1HuhvaJAI",
+      "categoriaId": 1596629896237,
+      "id": 3
+    },
+    {
+      "titulo": "Get Up And Jump",
+      "url": "https://www.youtube.com/watch?v=X5c7z-cBKDI",
+      "categoriaId": 1596629896237,
+      "id": 4
+    },
+    {
+      "titulo": "Why Don't You Love Me",
+      "url": "https://www.youtube.com/watch?v=M7vfnAhvKJ8",
+      "categoriaId": 1596629896237,
+      "id": 5
     }
   ]
 }
