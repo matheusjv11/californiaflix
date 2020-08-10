@@ -24,13 +24,12 @@ function Home() {
 
       {dadosIniciais1.reverse().map((categoria, indice) => {
         if (indice === 0) {
-          console.log(categoria);
           return (
             <div key={categoria.id}>
               <BannerMain
                 videoTitle="10 Curiosidades Red Hot Chili Peppers"
                 url="https://www.youtube.com/watch?v=9As9ud73nlA&t=390s"
-                videoDescription="O que é Front-End? Trabalhando na área"
+                videoDescription=""
               />
 
               <Carousel
