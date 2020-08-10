@@ -1,12 +1,11 @@
 import React from 'react';
-import { FooterBase } from './styles';
+import { FooterBase, Logo } from './styles';
+import logoGitHub from '../../assets/img/github.png';
+import logoLinkedIn from '../../assets/img/linkedin.png';
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
-      </a>
       <p>
         Orgulhosamente criado durante a
         {' '}
@@ -14,6 +13,18 @@ function Footer() {
           Imersão React da Alura
         </a>
       </p>
+      <p>Onde me encontrar:</p>
+
+      <div>
+        <a href="https://github.com/matheusjv11">
+          <Logo src={logoGitHub} alt="Logo GitHub" className="logo-footer" />
+        </a>
+        <a href="https://www.linkedin.com/in/matheus-almeida-3b8542176/">
+          <Logo src={logoLinkedIn} alt="Logo Linkedin" className="logo-footer" />
+        </a>
+
+      </div>
+
     </FooterBase>
   );
 }

@@ -8,7 +8,6 @@ export const ContentAreaContainer = styled.section`
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 10;
   @media (max-width: 800px) {
     padding-top: 100px;
     flex-direction: column;
@@ -46,6 +45,7 @@ ContentAreaContainer.Category = styled.h1`
 `;
 
 ContentAreaContainer.Description = styled.p`
+  font-size: 20px;
   @media (max-width: 800px) {
     display: none;
   }
@@ -54,7 +54,7 @@ ContentAreaContainer.Description = styled.p`
 ContentAreaContainer.Title = styled.h2`
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 1;
   margin-top: 0;
   margin-bottom: 32px;

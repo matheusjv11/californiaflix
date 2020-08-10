@@ -1,0 +1,63 @@
+.ModalVideo{
+    bottom: 40px;
+    height: fit-content;
+    width: 40%;
+    background-color: white;
+    border: 0;
+    align-self: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    
+}
+@media (max-width: 800px) {
+    .ModalVideo{
+      width: 400px;
+
+    }
+}
+.OverlayVideo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(65, 64, 64, 0.5) ;
+
+}
+.Modal-Title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ModalVideo-Div{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.ModalVideo-Button{
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 40px;
+    width: 60px;
+    font-size: 20px;
+    margin-top: 20px;
+    color: red;
+    border-color: red;
+
+}
+
+.ModalVideo-Button:hover{
+    margin-top: 20px;
+    margin-left: 220px;
+    background: rgba(65, 64, 64, 0.2);
+    border: 1px solid black;
+    border-radius: 5px;
+   
+
+}
+

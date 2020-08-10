@@ -22,7 +22,7 @@ function Home() {
     <PageDefault paddingAll={0}>
       {/* {dadosIniciais.length === 0 && (<div>Loading</div>)} */}
 
-      {dadosIniciais1.map((categoria, indice) => {
+      {dadosIniciais1.reverse().map((categoria, indice) => {
         if (indice === 0) {
           console.log(categoria);
           return (

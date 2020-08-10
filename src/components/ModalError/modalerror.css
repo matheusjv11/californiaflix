@@ -1,0 +1,50 @@
+.ModalError{
+    position: absolute;
+    top: 200px;
+    left: 40%;
+    right: 50%;
+    bottom: 40px;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    border: 0;
+    align-self: center;
+    
+}
+@media (max-width: 800px) {
+    .ModalError{
+        left: 10%;
+
+    }
+}
+.OverlayError{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(65, 64, 64, 0.5) ;
+
+}
+
+.ModalError-Div{
+    padding-left: 10px;
+}
+
+.ModalError-Button{
+    margin-top: 20px;
+    margin-left: 220px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+
+}
+
+.ModalError-Button:hover{
+    margin-top: 20px;
+    margin-left: 220px;
+    background: rgba(65, 64, 64, 0.2);
+    border: 1px solid black;
+    border-radius: 5px;
+
+}

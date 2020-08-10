@@ -6,6 +6,7 @@ import useForm from '../../../hooks/userForm';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
+import ModalError from '../../../components/ModalError';
 
 function CadastroVideo() {
   const history = useHistory();
@@ -14,6 +15,8 @@ function CadastroVideo() {
     url: '',
     categoria: '',
   };
+
+  const [modalIsActivate, setModalIsActivate] = useState(false);
   const { valores, handlerChange, clearForm } = useForm(valoreIniciais);
   const [categorias, setCategorias] = useState([]);
   const categoryTitle = categorias.map(({ nome }) => (
@@ -32,7 +35,8 @@ function CadastroVideo() {
     <PageDefault>
 
       <h1>Página de cadastro de video</h1>
-      <form onSubmit={(event) => {
+      <ModalError isActivate={modalIsActivate} hook={setModalIsActivate} />
+      <form onSubmit={(e) => e.preventDefault()}/* onSubmit={(event) => {
         event.preventDefault();
         clearForm();
 
@@ -53,7 +57,7 @@ function CadastroVideo() {
         } else {
           alert('Categoria inexistente');
         }
-      }}
+      }} */
       >
         <FormField
           label="Título do Vídeo"
@@ -83,14 +87,14 @@ function CadastroVideo() {
           suggestions={categoryTitle}
         />
 
-        <Button type="submit">
+        <Button onClick={() => setModalIsActivate(true)}>
           Cadastrar
         </Button>
       </form>
+        <Link to="/cadastro/categoria">
+          Cadastrar Categoria
+        </Link>
 
-      <Link to="/cadastro/categoria">
-        Cadastrar Categoria
-      </Link>
     </PageDefault>
   );
 }

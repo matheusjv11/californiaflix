@@ -4,6 +4,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/userForm';
+import ModalError from '../../../components/ModalError';
 
 function CadastroCategoria() {
   const valoreIniciais = {
@@ -13,6 +14,7 @@ function CadastroCategoria() {
   };
   const [categorias, setCategorias] = useState([]);
   const { valores, handlerChange, clearForm } = useForm(valoreIniciais);
+  const [modalIsActivate, setModalIsActivate] = useState(false);
 
   const URL = window.location.hostname.includes('localhost')
     ? 'http://localhost:8080/categorias'
@@ -51,7 +53,9 @@ function CadastroCategoria() {
         {valores.nome}
       </h1>
 
-      <form onSubmit={function handleSubmit(infos) {
+      <ModalError isActivate={modalIsActivate} hook={setModalIsActivate} />
+
+      <form onSubmit={(e) => e.preventDefault()}/* onSubmit={function handleSubmit(infos) {
         infos.preventDefault();
         setCategorias([
           ...categorias,
@@ -59,7 +63,7 @@ function CadastroCategoria() {
         ]);
 
         clearForm();
-      }}
+      }} */
       >
 
         <FormField
@@ -87,7 +91,7 @@ function CadastroCategoria() {
           onChange={handlerChange}
         />
 
-        <Button onClick={sendCategoria}>
+        <Button onClick={() => setModalIsActivate(true)}>
           Cadastrar
         </Button>
       </form>
