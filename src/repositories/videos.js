@@ -3,7 +3,7 @@ import config from '../config';
 const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
 
 function create(objetoDoVideo) {
-  // Just blocking post to data
+  // Just blocking post to data from insertion
 
   return null
 /*   return fetch(`${URL_VIDEOS}?_embed=videos`, {
