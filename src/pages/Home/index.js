@@ -2,20 +2,14 @@ import React, { useEffect, useState } from 'react';
 import PageDefault from '../../components/PageDefault';
 import Carousel from '../../components/Carousel';
 import BannerMain from '../../components/BannerMain';
-import categoriasRepository from '../../repositories/categorias';
+import categoriasRepository from '../../repositories/localDatabase';
 import dadosIniciais from '../../data/dados_iniciais.json';
 
 function Home() {
   const [dadosIniciais1, setDadosInciais] = useState([]);
 
   useEffect(() => {
-    categoriasRepository.getAllWithVideos()
-      .then((cateogriasComVideos) => {
-        setDadosInciais(cateogriasComVideos);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    setDadosInciais(categoriasRepository.getAllWithVideos())
   }, []);
 
   return (

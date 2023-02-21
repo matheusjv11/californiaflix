@@ -4,8 +4,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import useForm from '../../../hooks/userForm';
 import Button from '../../../components/Button';
-import videosRepository from '../../../repositories/videos';
-import categoriasRepository from '../../../repositories/categorias';
+import categoriasRepository from '../../../repositories/localDatabase';
 import ModalError from '../../../components/ModalError';
 
 function CadastroVideo() {
@@ -24,11 +23,7 @@ function CadastroVideo() {
   ));
 
   useEffect(() => {
-    categoriasRepository
-      .getAll()
-      .then((categoriasFromServer) => {
-        setCategorias(categoriasFromServer);
-      });
+    setCategorias(categoriasRepository.getAll())
   }, []);
 
   return (
