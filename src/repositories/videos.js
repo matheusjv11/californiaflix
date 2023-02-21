@@ -3,7 +3,10 @@ import config from '../config';
 const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
 
 function create(objetoDoVideo) {
-  return fetch(`${URL_VIDEOS}?_embed=videos`, {
+  // Just blocking post to data
+
+  return null
+/*   return fetch(`${URL_VIDEOS}?_embed=videos`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -18,7 +21,7 @@ function create(objetoDoVideo) {
       }
 
       throw new Error('Não foi possível pegar os dados');
-    });
+    }); */
 }
 
 export default {
